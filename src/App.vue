@@ -14,6 +14,11 @@ export default {
   components: {
     HelloWorld,
   },
+  async mounted() {
+    const res = await fetch('/api/users');
+    const data = await res.json();
+    console.log(data);
+  },
 };
 </script>
 
