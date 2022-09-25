@@ -1,4 +1,7 @@
 <template>
+  <h1 class="text-3xl font-bold underline text-red-300">
+    Hello world!
+  </h1>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
