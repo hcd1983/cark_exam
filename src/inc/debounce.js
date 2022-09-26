@@ -1,7 +1,6 @@
 let timeout = null;
 
 function debounce(func, delay) {
-  // timeout 初始值
   return function (...args) {
     if (timeout) {
       clearTimeout(timeout);
