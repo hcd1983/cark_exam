@@ -1,6 +1,11 @@
 import './style.css';
-import '@/fakeServer';
+import fakeServer from '@/fakeServer';
 import { createApp } from 'vue';
 import App from './App.vue';
 
-createApp(App).mount('#app');
+const initApp = async () => {
+  await fakeServer();
+  createApp(App).mount('#app');
+};
+
+initApp();

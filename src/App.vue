@@ -18,9 +18,12 @@ export default {
     AutocompleteInput,
   },
   async mounted() {
-    const res = await fetch('/api/users');
+    const res = await fetch('/api/launches');
     const data = await res.json();
     console.log(data);
+    // setTimeout(async () => {
+    //
+    // }, 2000);
   },
 };
 </script>
