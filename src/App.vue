@@ -1,4 +1,7 @@
 <template>
+  <div>
+    <AutocompleteInput />
+  </div>
   <h1 class="text-3xl font-bold underline text-red-300">
     Hello world!
   </h1>
@@ -7,12 +10,12 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import AutocompleteInput from '@/components/AutocompleteInput.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    AutocompleteInput,
   },
   async mounted() {
     const res = await fetch('/api/users');
