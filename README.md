@@ -19,7 +19,7 @@ Pick at least 2 components and designing with following spec and typing definiti
 6. Renderless component.
 7. Any other goods you like.
 
-## URL
+## View on Github Pages
 https://github.hcd-design-studio.com/cark_exam/
 
 ___
@@ -43,6 +43,3 @@ yarn build
 ```
 yarn lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
