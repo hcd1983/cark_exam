@@ -196,7 +196,7 @@ watch(() => pagesParams.perPage, (newVal, oldVal) => {
   if (newVal !== oldVal) {
     pagesParams.page = 1;
   }
-}, { deep: true });
+});
 
 watch(search, () => {
   pagesParams.page = 1;
