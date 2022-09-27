@@ -65,8 +65,7 @@ export default async function () {
         const total = output.length;
         // items offest
         const offset = (page - 1) * perPage;
-        output = output.slice(offset, offset + perPage);
-
+        output = output.slice(offset, offset + (+perPage));
         return {
           total,
           launches: output,
