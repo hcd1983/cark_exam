@@ -7,10 +7,6 @@ export default {
     totalItems: Number,
     perPage: Number,
     current: Number,
-    displaySize: {
-      type: Number,
-      default: 3,
-    },
   },
   setup(props, ctx) {
     const { totalItems, perPage, current } = toRefs(props);
