@@ -25,7 +25,7 @@ export default async function () {
     routes() {
       this.get('/api/launches', (schema, request) => {
         const defaultSettings = {
-          prePage: 20,
+          perPage: 20,
           page: 1,
           isSuccess: null,
           search: null,
@@ -34,7 +34,7 @@ export default async function () {
         };
         const { models: launches } = schema.launches.all();
         const {
-          page, prePage, search, sortBy, isSuccess, sort,
+          page, perPage, search, sortBy, isSuccess, sort,
         } = {
           ...defaultSettings,
           ...request.queryParams,
@@ -64,8 +64,8 @@ export default async function () {
         }
         const total = output.length;
         // items offest
-        const offset = (page - 1) * prePage;
-        output = output.slice(offset, offset + prePage);
+        const offset = (page - 1) * perPage;
+        output = output.slice(offset, offset + perPage);
 
         return {
           total,

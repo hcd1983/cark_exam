@@ -1,7 +1,6 @@
 <template>
-<div v-if="cols.length && rows.length">
-<table>
-  <thead>
+<table v-if="cols.length && rows.length">
+  <thead class="bg-black text-white">
   <tr>
     <th
       v-for="col in cols"
@@ -12,8 +11,13 @@
   </tr>
   </thead>
   <tbody>
-  <tr v-for="(row, idx) in rows" :key="idx">
-    <td v-for="col in cols" :key="`${idx}-${col.key}`">
+  <tr v-for="(row, idx) in rows" :key="idx" class="even:bg-gray-200">
+    <td
+      v-for="col in cols"
+      :key="`${idx}-${col.key}`"
+      :class="col.tdClass"
+      class="py-1 align-middle"
+    >
       <slot :name="col.key" :data="row">
         {{
           `${ ['string', 'number', 'boolean' ].includes(typeof (row[col.key])) ?
@@ -24,8 +28,6 @@
   </tr>
   </tbody>
 </table>
-<pre>{{ rows }}</pre>
-</div>
 <template v-else>
   No Data
 </template>
