@@ -22,7 +22,6 @@ export default {
         prevPage,
       };
     });
-    console.log({ ...slotProps });
     return () => ctx.slots.default?.(slotProps.value) ?? '';
   },
 };

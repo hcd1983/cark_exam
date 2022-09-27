@@ -42,13 +42,12 @@ const props = defineProps({
   suggestions: Array,
   placeholder: String,
 });
+const emit = defineEmits(['change', 'submit']);
 const { suggestions, placeholder } = toRefs(props);
 const el = ref(null);
 const search = ref('');
 const currentIdx = ref(null);
 const showOptions = ref(true);
-
-const emit = defineEmits(['change', 'submit']);
 
 const currentSuggestion = computed(() => {
   if (suggestions.value.length && currentIdx.value !== null) {
