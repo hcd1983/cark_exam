@@ -14,13 +14,13 @@
         :inputs="filterInputs"
         v-model:values="filterParams"
       />
-      <h2 class="text-3xl font-bold mt-10 mb-3">Pagination wihe renderless component</h2>
       <Pagination
         :totalItems="totalItems"
         :perPage="pagesParams.perPage"
         :current="pagesParams.page"
         #="{ totalPages, totalItems, nextPage, prevPage, current }"
       >
+        <h2 class="text-3xl font-bold mt-10 mb-3">Pagination wih renderless component</h2>
         <div v-if="totalPages > 1" class="flex justify-center justify-between">
           <div class="flex gap-3 items-center">
             <label>每頁顯示</label>
