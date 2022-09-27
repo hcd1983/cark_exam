@@ -22,6 +22,18 @@ Pick at least 2 components and designing with following spec and typing definiti
 ## View on Github Pages
 https://github.hcd-design-studio.com/cark_exam/
 
+## 專案說明
+
+### 串接 spaceX launches api
+火箭發射計畫表格。
+
+#### API
+使用 [miragejs](https://miragejs) ，在本地端模擬 API 。
+
+* /api/suggestions: 取得建議字串。用於 Autocomplete 的字串選項。
+* /api/launches: 火箭發射計畫列表，包含 filter 選項。
+
+
 ___
 
 ## Project setup
